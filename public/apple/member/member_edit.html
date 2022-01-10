@@ -3,7 +3,7 @@
 <head>
 <meta charset="uTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>회원정보 입력</title>
+<title>회원정보 수정</title>
 <!--css 내용  -->
 <style type="text/css">
 	table, th, td {
@@ -18,7 +18,6 @@
 
 <body>
 	<form action="./member_form.html" method="get" id="form" name="form">
-	
 		<table>
 			<caption>
 				<h2>회원정보</h2>
@@ -27,13 +26,13 @@
 				<th rowspan="4"><img src="../../../../study_html1/public/images/elon_musk/Elon_Musk.png" width="140px" height="200px"></th>
 				<th width="270px">이름</th>
 				<th colspan="2">
-					<input type="text" id="name" name="name" required style="text-align:center" placeholder="이름을 입력하세요." size="50px">
+					<input type="text" id="name" name="name" required style="text-align:center" placeholder="이름을 입력하세요." size="50px" value="최민준">
 				</th>
 			</tr>
 			<tr>
 				<th>성별</th>
 				<td style="text-align:center" colspan="2">
-					<input type="radio" id="male" name="sex" required/>
+					<input type="radio" id="male" name="sex" required checked>
 					<label for="male">남성</label>
 					<input type="radio" id="female" name="sex">
 					<label for="female">여성</label>							
@@ -42,7 +41,7 @@
 			<tr>
 				<th>생년 월일</th>
 				<th colspan="2">
-					<input type="date" id="dob" name="date_of_birth" required> 
+					<input type="date" id="dob" name="date_of_birth" required value="2003-10-03"> 
 			 	</th>
 			</tr>
 			<tr>
@@ -59,10 +58,10 @@
 							<optgroup label="일반">
 								<option>직장인
 								<option>실업자
-								<option>해당사항 없음																
+								<option value="eighth" selected>해당사항 없음																
 							</optgroup>				
 						</select>
-					<input type="text" id="explain1" name="직업설명" required placeholder="구체적인 하시는 일을 적어주세요(30자)" style="text-align:center" size="33px" required>
+					<input type="text" id="explain1" name="직업설명" required placeholder="구체적인 하시는 일을 적어주세요(30자)" style="text-align:center" size="33px" required value="예비대학생">
 				</th>
 			</tr>
 			<tr>
@@ -70,7 +69,7 @@
 				<th>
 					<select id="nation" name="국적" required>
 						<optgroup label="국내">
-							<option>대한민국
+							<option value="first" selected>대한민국
 						</optgroup>		
 						<optgroup label="해외">
 							<option>캐나다
@@ -94,7 +93,7 @@
 					<select id="address" name="주소" required>
 						<optgroup label="도">
 							<option>서울특별시
-							<option>경기도
+							<option value="second" selected>경기도
 							<option>강원도
 							<option>경상북도
 							<option>경상남도
@@ -106,26 +105,26 @@
 							<option>제주도
 						</optgroup>
 					</select>
-					<br><input type="text" placeholder="상세 주소를 입력해주세요.(시/군/구/도로명주소)" style="text-align:center" size="39px" required>
+					<br><input type="text" placeholder="상세 주소를 입력해주세요.(시/군/구/도로명주소)" style="text-align:center" size="39px" required value="화성시 동탄 반석로 16, 847동 1234호">
 				</th>
 			</tr>
 			<tr>
 				<th height="35px">전화번호</th>
 				<th>
-					<input type="text" id="pnumber" name="전화번호" placeholder="'-' 없이 전화번호를 입력하세요." style="text-align:center" size="30px" required>
+					<input type="text" id="pnumber" name="전화번호" placeholder="'-' 없이 전화번호를 입력하세요." style="text-align:center" size="30px" required value="01028382839">
 				</th>
 				<th>팩스번호</th>
 				<td style="text-align:center">
-					<input type="text" id="fax" name="fax" style="text-align:center" placeholder="'-'없이 팩스번호를 입력해주세요." size="35px" required>
+					<input type="text" id="fax" name="fax" style="text-align:center" placeholder="'-'없이 팩스번호를 입력해주세요." size="35px" required value="0293948290"> 
 				</td>
 			</tr>
 			<tr>
 				<th height="35px">이메일</th>
 				<th>
-					<input type="text" id="email" name="이메일" size="12px" required>
+					<input type="text" id="email" name="이메일" size="12px" required value="cmj28175791">
 					<label for="email">@</label>
 					<select id="emailopt" name="이메일주소" required>
-						<option>gmail.com</option>
+						<option value="first" selected>gmail.com</option>
 						<option>naver.com</option>
 						<option>hanmail.com</option>
 						<option>outlook.com</option>
@@ -133,7 +132,7 @@
 				</th>
 				<th>이메일 마케팅 수신 동의</th>
 				<th>
-					<input type="radio" id="appr" name="이메일 마케팅 수신" value="y" required>
+					<input type="radio" id="appr" name="이메일 마케팅 수신" value="y" required checked>
 					<label for="appr"><span style="font-weight:normal">동의</span></label>
 					<input type="radio" id="disappr" name="이메일 마케팅 수신" value="n">
 					<label for="disppr"><span style="font-weight:normal">비 동의</span></label>
@@ -143,11 +142,11 @@
 				<th height="35px">모바일</th>
 				<th>
 					<label for="mobile"><span style="font-weight:normal">010-</span></label>
-					<input type="text" id="moblie" name="핸드폰 전화번호" placeholder="'-' 없이 전화번호를 입력하세요." style="text-align:center" size="25px" required>
+					<input type="text" id="moblie" name="핸드폰 전화번호" placeholder="'-' 없이 전화번호를 입력하세요." style="text-align:center" size="25px" required value="01023849238">
 				</th>
 				<th>모바일 수신동의</th>
 				<th>
-					<input type="radio" id="appr2" name="모바일 수신 동의" value="y" required> 						
+					<input type="radio" id="appr2" name="모바일 수신 동의" value="y" required checked> 						
 					<label for="appr2"><span style="font-weight:normal">동의</span></label>					
 					<input type="radio" id="disappr2" name="모바일 수신 동의" value="n"> 						
 					<label for="disppr2"><span style="font-weight:normal">비 동의</span></label>
@@ -156,11 +155,11 @@
 			<tr>
 				<th height="35px">아이디</th>
 				<th>
-				<input type="text" id="id" name="아이디" placeholder="아이디를 입력하세요." style="text-align:center" required>
+				<input type="text" id="id" name="아이디" placeholder="아이디를 입력하세요." style="text-align:center" required value="herry1203">
 				</th>
 				<th>비밀번호</th>
 				<th>
-					<input type="password" id="password" name="비밀번호는" maxlength="20" placeholder="20자 이내/영소대문자,특수문자(!@#$*_가능)" style="text-align:center" size="36px" required>
+					<input type="password" id="password" name="비밀번호는" maxlength="20" placeholder="20자 이내/영소대문자,특수문자(!@#$*_가능)" style="text-align:center" size="36px" required value="June239">
 					<hr><label for="password_check"><span style="font-weight:normal;font-size:13px">비밀번호 재 입력 </span></label>
 					<input type="password" id="password_check" name="재입력 비밀번호" maxlength="20" placeholder="20자 이내/영소대문자,특수문자(!@#$*_가능)" style="text-align:center" size="36px" required>
 				</th>
@@ -174,25 +173,25 @@
 						<option>자신의 보물 제 1호는?</option>
 						<option>추억하고 싶은 날짜가 있다면?</option>
 						<option>내가 제일 존경하는 인물은?</option>
-						<option>나의 강아지 이름은?</option>
+						<option value="first" selected>나의 강아지 이름은?</option>
 					</select>
 				</th>
 				<th>비밀번호 문제 답</th>
-				<th><input style="text-align:center" type="text" id="answer" name="문제 답" placeholder="질문의 대한 답을 적어주세요." size="36px" required></th>
+				<th><input style="text-align:center" type="text" id="answer" name="문제 답" placeholder="질문의 대한 답을 적어주세요." size="36px" required value="강아지가 없다"></th>
 			</tr>
 			<tr>
 				<th height="35px">결혼여부</th>
 				<td style="text-align:center">
 					<input type="radio" id="yes1" name="결혼 여부" value="y" required> 						
 					<label for="appr2">O &nbsp;&nbsp;&nbsp;&nbsp;</label>					
-					<input type="radio" id="no1" name="결혼 여부" value="n"> 						
+					<input type="radio" id="no1" name="결혼 여부" value="n" checked> 						
 					<label for="disppr2">X</label>
 				</td>
 				<th>결혼 기념일</th>
 				<td style="text-align:center" >
 					<input type="radio" id="weddate" name="anniv" required>
 					<label><input type="date" id="date" name="결혼기념일"></label>
-					<input type="radio" id="weddate2" name="anniv">
+					<input type="radio" id="weddate2" name="anniv" checked>
 					<label for="weddate2">없음</label>
 				</td>
 			</tr>
@@ -201,40 +200,40 @@
 				<td style="text-align:center">
 					<input type="radio" id="yes2" name="자녀여부" value="y" required> 						
 					<label for="appr2">O &nbsp;&nbsp;&nbsp;&nbsp;</label>					
-					<input type="radio" id="no2" name="자녀여부" value="n"> 						
+					<input type="radio" id="no2" name="자녀여부" value="n" checked> 						
 					<label for="disppr2">X</label>
 				</td>
 				<th>좋아하는 색깔</th>
 				<td style="text-align:center">
-					<input type="color" id="color" name="색" required>
-					<input type="text" id="color" name="색" style="text-align:center" placeholder="좋아하는 색을 적어주세요." size="20px" required>
+					<input type="color" id="color" name="색" required value="#3EC188">
+				<input type="text" id="color" name="색" style="text-align:center" placeholder="좋아하는 색을 적어주세요." size="20px" required value="민트색">
 				</td>
 			</tr>
 			<tr>
 				<th height="35px">취미</th>
 				<td style="text-align:center" colspan="3">
 					<label for="hobby1">1.</label>
-					<input type="text" id="hobby1" name="hobby1" size="13px" placeholder="첫 번쨰 취미" style="text-align:center" required> 
+					<input type="text" id="hobby1" name="hobby1" size="13px" placeholder="첫 번쨰 취미" style="text-align:center" required value="영화보기"> 
 					<label for="hobby2">2.</label>
-					<input type="text" id="hobby2" name="hobby2" size="13px" placeholder="두 번쨰 취미" style="text-align:center" required> 
+					<input type="text" id="hobby2" name="hobby2" size="13px" placeholder="두 번쨰 취미" style="text-align:center" required value="조깅"> 
 					<label for="hobby3">3.</label>
-					<input type="text" id="hobby3" name="hobby3" size="13px" placeholder="세 번쨰 취미" style="text-align:center" required> 
+					<input type="text" id="hobby3" name="hobby3" size="13px" placeholder="세 번쨰 취미" style="text-align:center" required value="테니스"> 
 					<label for="hobby4">4.</label>
-					<input type="text" id="hobby4" name="hobby4" size="13px" placeholder="네 번쨰 취미" style="text-align:center"> 
+					<input type="text" id="hobby4" name="hobby4" size="13px" placeholder="네 번쨰 취미" style="text-align:center" value="짐 자기"> 
 					<label for="hobby5">5.</label>
-					<input type="text" id="hobby5" name="hobby5" size="13px" placeholder="다섯 번쨰 취미" style="text-align:center"> 
+					<input type="text" id="hobby5" name="hobby5" size="13px" placeholder="다섯 번쨰 취미" style="text-align:center" value="유튜브 보기"> 
 				</td>
 			</tr>
 			<tr>
 				<th height="35px">추천인</th>
 				<td style="text-align:center">
-					<input type="text" id="reco" name="추천인" placeholder="추천인을 적어주세요." style="text-align:center">
+					<input type="text" id="reco" name="추천인" placeholder="추천인을 적어주세요." style="text-align:center" value="이동석">
 				</td>
 				<th>SNS</th>
 				<td style="text-align:center">
-					<input type="checkbox" id="kakao" name="kakao" value="y"> 
+					<input type="checkbox" id="kakao" name="kakao" value="y" checked> 
 					<label for="kakao">카카오톡</label>
-					<input type="checkbox" id="insta" name="insta" value="y"> 
+					<input type="checkbox" id="insta" name="insta" value="y" checked> 
 					<label for="kakao">인스타그램</label>
 					<input type="checkbox" id="twitter" name="twitter" value="y"> 
 					<label for="kakao">트위터</label>
@@ -247,12 +246,12 @@
 				<td style="text-align:center">
 					<input type="radio" id="homepage1" name="홈페이지" required>
 					<label for="homepage1"><input type="url" id="url" name="url" placeholder="홈페이지 url를 입력하세요."></label>
-					<input type="radio" id="homepage2" name="홈페이지">
+					<input type="radio" id="homepage2" name="홈페이지" checked>
 					<label for="homepage2">없음</label>	
 				</td>
 				<th>개인정보 유호기간</th>
 				<td style="text-align:center">
-					<input type="radio" id="one" name="expir" required>
+					<input type="radio" id="one" name="expir" required checked> 
 					<label for="one">1년</label>
 					<input type="radio" id="three" name="expir">
 					<label for="three">3년</label>	
@@ -268,22 +267,18 @@
 				<td style="text-align:center;font-size:20px" height="40px" colspan="4"><strong>자기소개(100자 내외)</strong></th>
 			</tr>
 			<tr>
-				<td colspan="4" width="700px" height="400px"><textarea name="자기소개" cols="123" rows="26">hello world!</textarea></td>
+				<td colspan="4" width="700px" height="400px"><textarea name="자기소개" cols="123" rows="26">안녕하세요</textarea></td>
 			</tr>
 		</table>
 		<input type="button" id="button" value="제출" onclick="here();">
+			<hr>
 	</form>
 		<script type="text/javascript">
 	function here() {
 		document.getElementById("form").submit();
 	}
 	</script>
-	<ul>
-		<li>
-			<u><a href="./member_list.html">목록</a></u></span>			
-		</li>
-	</ul>
-	<hr>
+	
 	 <form>
 			<table>
 				<caption> 
@@ -299,18 +294,18 @@
 				<tr>
 					<th height="30px">1</th>
 					<td style="text-align:center">
-						<input type="text" id="project1" name="프로젝트명" style="text-align:center" placeholder="프로젝트명을 입력하세요" size="30px">
+						<input type="text" id="project1" name="프로젝트명" style="text-align:center" placeholder="프로젝트명을 입력하세요" size="30px" value="웹 사이트 만들기">
 					</td>
 					<td style="text-align:center">
-						<input type="month" id="pdate1" name="1프로젝트기간" min=2022-01>
+						<input type="month" id="pdate1" name="1프로젝트기간" min="2022-01" value="2022-01">
 						<label for="pdate1"> ~ </label>
-						<input type="month" id="pdate1.1" name="1.1프로젝트기간" min=2022-01>
+						<input type="month" id="pdate1.1" name="1.1프로젝트기간" min="2022-01" value="2022-06">
 					</td>
 					<td style="text-align:center">
-						<input type="text" id="role" name="역활" placeholder="역활을 입력하세요." size="23px" style="text-align:center">
+						<input type="text" id="role" name="역활" placeholder="역활을 입력하세요." size="23px" style="text-align:center" value="조장">
 					</td>
 					<td style="text-align:center">					
-						<input type="text" id="order" name="발주사" placeholder="발주사를 입력하세요." size="23px" style="text-align:center">
+						<input type="text" id="order" name="발주사" placeholder="발주사를 입력하세요." size="23px" style="text-align:center" value="00회사">
 					</td>
 				</tr>
 				<tr>
@@ -319,9 +314,9 @@
 						<input type="text" id="project2" name="2프로젝트명" style="text-align:center" placeholder="프로젝트명을 입력하세요" size="30px">
 					</td>
 						<td style="text-align:center">
-						<input type="month" id="pdate2" name="2프로젝트기간" min=2022-01>
+						<input type="month" id="pdate2" name="2프로젝트기간" min="2022-01">
 						<label for="pdate2"> ~ </label>
-						<input type="month" id="pdate2.1" name="2.1프로젝트기간" min=2022-01>
+						<input type="month" id="pdate2.1" name="2.1프로젝트기간" min="2022-01">
 					</td>
 					<td style="text-align:center">
 						<input type="text" id="role" name="역활" placeholder="역활을 입력하세요." size="23px" style="text-align:center">
@@ -336,9 +331,9 @@
 						<input type="text" id="project3" name="3프로젝트명" style="text-align:center" placeholder="프로젝트명을 입력하세요" size="30px">
 					</td>
 					<td style="text-align:center">
-						<input type="month" id="pdate3" name="3프로젝트기간" min=2022-01>
+						<input type="month" id="pdate3" name="3프로젝트기간" min="2022-01">
 						<label for="pdate3"> ~ </label>
-						<input type="month" id="pdate3.1" name="3.1프로젝트기간" min=2022-01>
+						<input type="month" id="pdate3.1" name="3.1프로젝트기간" min="2022-01">
 					</td>
 					<td style="text-align:center">
 						<input type="text" id="role" name="역활" placeholder="역활을 입력하세요." size="23px" style="text-align:center">
@@ -353,9 +348,9 @@
 						<input type="text" id="project4" name="4프로젝트명" style="text-align:center" placeholder="프로젝트명을 입력하세요" size="30px">
 					</td>
 					<td style="text-align:center">
-						<input type="month" id="pdate4" name="4프로젝트기간" min=2022-01>
+						<input type="month" id="pdate4" name="4프로젝트기간" min="2022-01">
 						<label for="pdate4"> ~ </label>
-						<input type="month" id="pdate4.1" name="4.1프로젝트기간" min=2022-01>
+						<input type="month" id="pdate4.1" name="4.1프로젝트기간" min="2022-01">
 					</td>
 					<td style="text-align:center">
 						<input type="text" id="role" name="역활" placeholder="역활을 입력하세요." size="23px" style="text-align:center">
@@ -370,9 +365,9 @@
 						<input type="text" id="project5" name="5프로젝트명" style="text-align:center" placeholder="프로젝트명을 입력하세요" size="30px">
 					</td>
 					<td style="text-align:center">
-						<input type="month" id="pdate5" name="5프로젝트기간" min=2022-01>
+						<input type="month" id="pdate5" name="5프로젝트기간" min="2022-01">
 						<label for="pdate5"> ~ </label>
-						<input type="month" id="pdate5.1" name="5.1프로젝트기간" min=2022-01>
+						<input type="month" id="pdate5.1" name="5.1프로젝트기간" min="2022-01">
 					</td>
 					<td style="text-align:center">
 						<input type="text" id="role" name="역활" placeholder="역활을 입력하세요." size="23px" style="text-align:center">
@@ -389,11 +384,6 @@
 		document.getElementById("form").submit();
 	}
 	</script>
-	<ul>
-		<li>
-			<u><a href="./member_list.html">목록</a></u></span>			
-		</li>
-	</ul>
 	
 </body>
 </html>
