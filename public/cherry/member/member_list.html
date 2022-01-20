@@ -14,10 +14,34 @@
 	font-style: normal;
 	}
 	 */
-	nav {
-		margin-left:auto;
-		margin-right:auto;
+		.pagination > li > a
+	{
+	    background-color:rgba(255,128,128,0);
+	    color: #000000;
 	}
+	
+	.pagination > li > a:focus,
+	.pagination > li > a:hover,
+	.pagination > li > span:focus,
+	.pagination > li > span:hover
+	{
+	    color: #000000;
+	    background-color: #FDE26C90;
+	    border-color: #ddd;
+	}
+	
+	.pagination > .active > a
+	{
+	    color: rgba(255,128,128,0.1);
+	    background-color: #FFB144 !Important;
+	    border: solid 1px #000000 !Important;
+	}
+	
+	.pagination > .active > a:hover
+	{
+	    background-color: #FFB144 !Important;
+	    border: solid 1px #000000;
+	    }
 	
 	 table {
 		margin-left:auto;
@@ -172,8 +196,8 @@
 			</th>
 		</tr>
 	</table>
-		<nav aria-label="Page navigation example">
-		  <ul class="pagination justify-content-center">
+		<nav aria-label="Page navigation example btn btn-outline-secondary">
+		  <ul class="pagination justify-content-center" >
 		    <li class="page-item">
 		      <a class="page-link" href="./member_list.html" aria-label="Previous">
 		        <span aria-hidden="true">&laquo;</span>
