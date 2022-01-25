@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{margin:0; padding:0; box-sizing: border-box;}
+
+body{
+	font-family: 'Lobster', cursive;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image:url(../images/peoples_of_delivery.jpeg); 
+	background-repeat: no repeat center;
+	background-size: cover;
+}
