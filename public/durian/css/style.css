@@ -22,8 +22,31 @@ body::before {
 
 .login-form {position: relatvie; z-index:2;}
 .login-form h1 {
-	font-size: 32px; color:#fff;
+	font-size: 60px; color:#fff;
 	text-align:center;
 }
-.int-area {width: 400px;}
-.int-area input {width:100%;}
+.int-area {
+	width: 400px; position: relative;
+	margin-top: 20px;
+	}
+	
+.int-area input {
+	width:100%;
+	padding:20px 10px 10px;
+	background-color:transparent;
+	border:none;
+	border-bottom: 4px solid #999;
+	font-size: 18px; color:#fff;
+	outline: none;
+}
+.int-area label{
+	position: absolute; left: 10px; top: 15px;
+	font-size: 18px; color: #fff;
+	transition: all .5s ease;
+	
+}
+.int-area input:focus +label,
+.int-area input:valid +label {
+	top:0;
+	font-size:13px; color: #166cea;
+}
