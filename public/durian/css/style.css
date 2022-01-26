@@ -4,6 +4,7 @@
 
 body{
 	font-family: 'Lobster', cursive;
+	color: white;
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -12,3 +13,17 @@ body{
 	background-repeat: no repeat center;
 	background-size: cover;
 }
+body::before {
+	content:"";
+	position: absolute; z-index: 1;
+	top:0; right:0; bottom:0; left:0;
+	background-color: rgba(0,0,0,.3)	
+}
+
+.login-form {position: relatvie; z-index:2;}
+.login-form h1 {
+	font-size: 32px; color:#fff;
+	text-align:center;
+}
+.int-area {width: 400px;}
+.int-area input {width:100%;}
