@@ -24,12 +24,15 @@ body::before {
 .login-form h1 {
 	font-size: 60px; color:#fff;
 	text-align:center;
+	margin-bottom: 60px;
 }
 .int-area {
 	width: 400px; position: relative;
 	margin-top: 20px;
 	}
-	
+.int-area {
+	margin-top: 10px;
+}
 .int-area input {
 	width:100%;
 	padding:20px 10px 10px;
@@ -43,10 +46,42 @@ body::before {
 	position: absolute; left: 10px; top: 15px;
 	font-size: 18px; color: #fff;
 	transition: all .5s ease;
-	
+}
+.int-area label.warning {
+	color: red !important;
+	animation:warning .2s ease ;
+	animation-iteration-count: 5;
+}
+@keyframes warning {
+	0% {transform: translateX(-8px);}
+	25% {transform: translateX(-8px);}
+	50% {transform: translateX(-8px);}
+	75% {transform: translateX(-8px);}
 }
 .int-area input:focus +label,
 .int-area input:valid +label {
-	top:0;
+	top:-2px;
 	font-size:13px; color: #166cea;
+}
+
+.btn-area {margin-top: 30px;}
+.btn-area button {
+	width: 100%; 
+	height: 50px;
+	background: #166cea;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 25px;
+	border:none;
+	cursor: pointer;
+}
+
+.caption {
+	margin-top: 20px;
+	text-align:center;	
+}
+
+.caption a {
+	font-size: 15px; color: #fff;
+	text-decoration:none;
 }
